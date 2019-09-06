@@ -1,33 +1,29 @@
-<template lang="html">
-  <div class="counter">
-    {{ count }}
+<template>
+  <div class="hello">
+    <h1>{{ message }}</h1>
+    <CounterOutput />
+    <CounterControls />
   </div>
 </template>
 
 <script>
+import CounterOutput from './CounterOutput.vue'
+import CounterControls from './CounterControls.vue'
+
 export default {
   name: 'Counter',
-  computed: {
-    count() {
-      return this.$store.state.counter.count
-    },
+  components: {
+    CounterOutput,
+    CounterControls,
+  },
+  props: {
+    message: String,
   },
 }
 </script>
 
-<style lang="scss">
-@include error-animation;
-@include info-animation;
-
-.counter {
-  background-color: #42b983;
-  color: #fff;
-  font-size: 4rem;
-  font-weight: bold;
-  padding: 4rem;
-  transition: background-color .5s $cubicInOut;
-
-  @include error;
-  @include info;
+<style scoped>
+h3 {
+  margin: 40px 0 0;
 }
 </style>
