@@ -1,0 +1,41 @@
+@mixin error-animation {
+  @keyframes error-notifier {
+    0% {
+      background-color: #dc8a49;
+    }
+    50% {
+      background-color: #ffc107;
+    }
+    100% {
+      background-color: #dc3545;
+    }
+  }
+}
+
+@mixin error {
+  .error & {
+    animation: error-notifier .35s linear 0s 3 alternate;
+    background-color: #dc3545;
+  }
+}
+
+@mixin info-animation {
+  @keyframes info-notifier {
+    0% {
+      background-color: #1dc3de;
+    }
+    50% {
+      background-color: #9cf1ff;
+    }
+    100% {
+      background-color: #17a2b8;
+    }
+  }
+}
+
+@mixin info {
+  .info & {
+    animation: info-notifier .35s linear 0s 3 alternate;
+    background-color: #17a2b8;
+  }
+}
