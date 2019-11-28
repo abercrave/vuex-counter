@@ -1,5 +1,5 @@
 <template lang="html">
-  <button class="button" @click="onClick" :disabled="isDisabled">
+  <button class="button" :disabled="isDisabled">
     <slot>Click me!</slot>
   </button>
 </template>
@@ -9,7 +9,6 @@ export default {
   name: 'Button',
   props: {
     isDisabled: Boolean,
-    onClick: Function,
   },
 }
 </script>

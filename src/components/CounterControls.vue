@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="counter-controls">
-    <v-button :onClick="decrement" :isDisabled="decrementIsDisabled">-</v-button>
-    <v-button :onClick="increment">+</v-button>
+    <v-button v-on:click.native="decrement" :isDisabled="decrementIsDisabled">-</v-button>
+    <v-button v-on:click.native="increment">+</v-button>
   </div>
 </template>
 
